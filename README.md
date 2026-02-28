@@ -2,6 +2,8 @@
 
 A 32-file research corpus documenting the quantum computing threat to Bitcoin's elliptic curve cryptography, the post-quantum proposals under development, and the community debate around migration.
 
+**Live site:** https://strml.github.io/bitcoin-quantum-perplexity/
+
 **Last updated:** February 28, 2026
 
 ## What This Is
