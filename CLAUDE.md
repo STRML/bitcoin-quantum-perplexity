@@ -49,6 +49,15 @@ Key sections that should be audited when these events occur:
 | OP_CAT (BIP-347) activation or rejection | `03-proposals-and-bips/soft-fork-vs-hard-fork.md` |
 | Any quantum factoring of keys > 50 bits | All threat model and timeline files |
 
-## No Build Commands
+## GitHub Pages Site
 
-This corpus has no build, test, lint, or dev server commands. All files are plain markdown.
+The site at https://strml.github.io/bitcoin-quantum-perplexity/ is a custom SPA served from `docs/`.
+
+After editing any markdown file, regenerate the site data:
+
+```bash
+python generate_data_js.py
+git add docs/data.js && git commit -m "Regenerate site" && git push
+```
+
+`generate_data_js.py` walks all `.md` files (excluding `README.md`) and bundles them into `docs/data.js` as a `CORPUS` JS object consumed by the SPA.
